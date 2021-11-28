@@ -12,6 +12,8 @@ function MovieView() {
   const [movie, setMovie] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
 
+  console.log('location from MovieView', location);
+
   function handleSubmit(e) {
     e.preventDefault();
 

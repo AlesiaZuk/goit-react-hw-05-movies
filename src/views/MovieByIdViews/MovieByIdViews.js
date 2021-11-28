@@ -19,7 +19,7 @@ function MovieByIdViews() {
   const history = useHistory();
   const location = useLocation();
 
-  console.log('location', location);
+  console.log('location from MovieByIdViews', location);
 
   const { movieId } = useParams();
 
@@ -105,7 +105,7 @@ function MovieByIdViews() {
               to={{
                 pathname: `/movies/${movieId}/cast`,
                 state: {
-                  from: location,
+                  from: location?.state?.from ?? '/',
                 },
               }}
               className={s.link}
@@ -119,7 +119,7 @@ function MovieByIdViews() {
               to={{
                 pathname: `/movies/${movieId}/reviews`,
                 state: {
-                  from: location,
+                  from: location?.state?.from ?? '/',
                 },
               }}
               className={s.link}

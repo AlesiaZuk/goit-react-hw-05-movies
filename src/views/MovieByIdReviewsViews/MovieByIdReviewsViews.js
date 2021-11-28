@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import * as MoviesApi from '../../services/movies-api';
 import s from './MovieByIdReviewsViews.module.css';
 
-function MovieByIdReviewsViews({ location }) {
+function MovieByIdReviewsViews() {
   const [reviews, setReviews] = useState([]);
   const { movieId } = useParams();
 

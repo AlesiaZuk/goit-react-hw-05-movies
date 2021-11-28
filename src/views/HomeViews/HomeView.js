@@ -10,6 +10,8 @@ export default function HomeView() {
   const location = useLocation();
   const [movies, setMovies] = useState([]);
 
+  console.log('location from HomeView', location);
+
   useEffect(() => {
     MoviesApi.fetchTrendingMovies().then(setMovies);
   }, []);
