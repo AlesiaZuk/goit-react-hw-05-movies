@@ -8,7 +8,7 @@ function Navigation() {
         Home
       </NavLink>
 
-      <NavLink to="/" className={s.link} activeClassName={s.activeLink}>
+      <NavLink to="/movies" className={s.link} activeClassName={s.activeLink}>
         Movies
       </NavLink>
     </nav>
