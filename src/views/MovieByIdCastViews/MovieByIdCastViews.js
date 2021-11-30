@@ -7,12 +7,13 @@ import no_image from '../../image/no_image.png';
 import s from './MovieByIdCastViews.module.css';
 
 function MovieByIdCastViews() {
-  const [actors, setActors] = useState({});
+  const [actors, setActors] = useState([]);
   const { movieId } = useParams();
 
-  console.log('useParams', useParams());
-  console.log('actors', actors);
   useEffect(() => {
+    if (!movieId) {
+      return;
+    }
     MoviesApi.fetchMovieCast(movieId).then(setActors);
   }, [movieId]);
 

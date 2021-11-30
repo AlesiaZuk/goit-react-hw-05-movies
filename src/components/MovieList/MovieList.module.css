@@ -1,11 +1,3 @@
-.section {
-  padding-bottom: 40px;
-}
-.title {
-  text-align: center;
-  text-transform: uppercase;
-}
-
 .list {
   display: flex;
   justify-content: center;

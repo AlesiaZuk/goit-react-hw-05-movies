@@ -8,27 +8,21 @@ function MovieByIdReviewsViews() {
   const [reviews, setReviews] = useState([]);
   const { movieId } = useParams();
 
-  console.log(reviews);
-  console.log(movieId);
-
   useEffect(() => {
     MoviesApi.fetchMovieReviews(movieId).then(setReviews);
   }, [movieId]);
 
   return (
     <>
-      {reviews.results === null ? (
+      {reviews.results && (
         <ul>
           {reviews.results.map(review => (
             <li key={review.id} className={s.item}>
-              <p>alesia</p>
               <h4>{review.author}</h4>
               <p>{review.content}</p>
             </li>
           ))}
         </ul>
-      ) : (
-        <p className={s.text}>We don`t have any reviews for this movies.</p>
       )}
     </>
   );
