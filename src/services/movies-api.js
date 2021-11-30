@@ -30,7 +30,7 @@ export function fetchMoviesById(movieId) {
 
 export function fetchMoviesSearch(searchQuery) {
   return fetch(
-    `${BASE_URL}/${SEARCH_ENDPOINT}/?query=${searchQuery}&api_key=${API_KEY}`,
+    `${BASE_URL}/${SEARCH_ENDPOINT}?query=${searchQuery}&api_key=${API_KEY}`,
   ).then(response => {
     if (response.ok) {
       return response.json();
